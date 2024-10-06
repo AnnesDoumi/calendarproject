@@ -20,7 +20,6 @@ const upload = multer({ storage: storage });
 // Erstelle eine neue Express-Anwendung
 const app = express();
 const PORT = 3000;
-app.use(express.static('public'));
 
 // Aktiviere CORS für alle eingehenden Anfragen
 app.use(cors());
