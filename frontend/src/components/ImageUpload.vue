@@ -20,7 +20,8 @@ export default {
       const formData = new FormData();
       formData.append('image', this.selectedImage);
 
-      fetch('http://localhost:3000/upload', {
+      // Verwende eine relative URL für die API-Anfrage
+      fetch('/api/upload', {
         method: 'POST',
         body: formData,
       })
@@ -35,11 +36,9 @@ export default {
             console.error('Fehler beim Hochladen:', error);
             alert('Fehler beim Hochladen des Bildes: ' + error.message);
           });
-
-    }
-
-  }
-}
+    },
+  },
+};
 </script>
 
 <style scoped>
