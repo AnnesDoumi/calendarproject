@@ -26,7 +26,7 @@ app.use(cors());
 
 // Definiere die Route für den Hauptzugriffspunkt
 app.get('/', (req, res) => {
-    res.send('Hallo Welt!');
+    res.send('public/index.html');
 });
 
 // Definiere die Route für das Hochladen von Dateien
