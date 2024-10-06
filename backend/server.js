@@ -2,6 +2,7 @@
 const express = require('express');
 const multer = require('multer');
 const cors = require('cors');
+const path = require("path");
 
 // Konfiguriere Multer für die Dateispeicherung
 const storage = multer.diskStorage({
@@ -26,7 +27,7 @@ app.use(cors());
 
 // Definiere die Route für den Hauptzugriffspunkt
 app.get('/', (req, res) => {
-    res.send('public/index.html');
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // Definiere die Route für das Hochladen von Dateien
